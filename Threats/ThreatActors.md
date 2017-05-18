@@ -73,14 +73,20 @@ Made by Dmitri Alperovitch
 **Nation-State-Based Adversaries**
 
 Panda = China
+
 Bear = Russia
+
 Kitten = Iran
+
 India = Tiger
+
 North Korea = Chollima (a mythical winged horse)
+
 
 **Non-Nation-State Adversaries**
 
 Jackal = Activist groups
+
 Spider = Criminal groups
 
 (Adjective) (Country)
