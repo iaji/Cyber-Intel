@@ -53,6 +53,7 @@ Grizzly Steppe
 
 ### Targets:
 ```
+Military
 
 ```
 
@@ -64,6 +65,8 @@ Grizzly Steppe
 
 
 **CrowdStrike Naming Convention**
+
+Made by Dmitri Alperovitch
 
 ![CrowdStrike Naming Convention](https://www.crowdstrike.com/blog/wp-content/uploads/2014/09/Picture1.png)
 
