@@ -1,13 +1,27 @@
 # **Cyber Resources**
 
-Emerging Threats http://www.emergingthreats.org/us/news/blog
+[Emerging Threats](http://www.emergingthreats.org/us/news/blog)
 
-Alien Vault
-https://www.alienvault.com/blogs
-https://otx.alienvault.com/dashboard/new/
+[Alien Vault Dashboard](https://otx.alienvault.com/dashboard/new/)
+[AV Blogs](https://www.alienvault.com/blogs)
 
-Snort Community
-Snort VRT,
-Abuse.ch,
-VirusTotal,
-NationalVulnerabilityDatabase (NVDB), MaliciousDNS.  
+
+[Secure List](https://securelist.com/)
+
+[We Live Security](https://www.welivesecurity.com/)
+
+[ClamAV](http://blog.clamav.net/)
+
+[Talos Intel](http://blog.talosintelligence.com/)
+
+[Snort Blog](http://blog.snort.org/)
+
+[Abuse Swiss Sec](https://www.abuse.ch/)
+
+[Virus Total](https://www.virustotal.com/)
+
+[National Vulnerability Database](https://nvd.nist.gov/#)
+
+[FireEye](https://www.fireeye.com/)
+
+[CrowdStrike Blog](https://www.crowdstrike.com/blog/)
