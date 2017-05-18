@@ -37,3 +37,9 @@ Embassies of Eastern Bloc Nations:
 )
 
 [Snake Malware Framework For Mac OS X](https://otx.alienvault.com/pulse/5909fc8d28fba172cbbb89cf/)
+
+
+### References
+
+
+![CrowdStrike Naming Convention](https://www.crowdstrike.com/blog/wp-content/uploads/2014/09/Picture1.png)
