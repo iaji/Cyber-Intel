@@ -25,3 +25,7 @@
 [FireEye](https://www.fireeye.com/)
 
 [CrowdStrike Blog](https://www.crowdstrike.com/blog/)
+
+[Threat Connect Blog](https://www.threatconnect.com/blog/)
+
+[Secure Works Blog](https://www.secureworks.com/blog)

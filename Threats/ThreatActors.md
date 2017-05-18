@@ -1,6 +1,6 @@
 # **Threat Actors**
 
-## Venomous Bear (Turla Group)
+## **Venomous Bear (Turla Group)**
 
 ### Aliases:
 ```
@@ -33,13 +33,35 @@ Embassies of Eastern Bloc Nations:
 
 [Carbon: 2nd stage backdoor](https://otx.alienvault.com/pulse/58dd14f8e88c7c13038460ba/)
 
-[Info on Turla's satellite based C&C](https://otx.alienvault.com/pulse/55f08e374637f26df8744429
-)
+[Info on Turla's satellite based CnC](https://otx.alienvault.com/pulse/55f08e374637f26df8744429)
 
 [Snake Malware Framework For Mac OS X](https://otx.alienvault.com/pulse/5909fc8d28fba172cbbb89cf/)
 
+## **Fancy Bear**
+
+### Aliases:
+```
+APT28
+Pawn Storm
+Sofacy Group
+Sednit
+STRONTIUM
+Tsar Team
+Threat Group-4127
+Grizzly Steppe
+```
+
+### Targets:
+```
+
+```
+
+### More Relevant Info:
+
+**Affiliated with Cozy Bear**
 
 # References
+
 
 **CrowdStrike Naming Convention**
 
@@ -59,7 +81,6 @@ Jackal = Activist groups
 Spider = Criminal groups
 
 (Adjective) (Country)
-
 
 **APT's**
 
