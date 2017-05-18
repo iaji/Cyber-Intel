@@ -41,5 +41,21 @@ Embassies of Eastern Bloc Nations:
 
 ### References
 
+**CrowdStrike Naming Convention**
 
 ![CrowdStrike Naming Convention](https://www.crowdstrike.com/blog/wp-content/uploads/2014/09/Picture1.png)
+
+**Nation-State-Based Adversaries**
+
+Panda = China
+Bear = Russia
+Kitten = Iran
+India = Tiger
+North Korea = Chollima (a mythical winged horse)
+
+**Non-Nation-State Adversaries**
+
+Jackal = Activist groups
+Spider = Criminal groups
+
+(Adjective) (Country)
