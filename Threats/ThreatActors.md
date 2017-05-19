@@ -2,7 +2,7 @@
 
 *This document is continuously updated as I find more information*
 
-## 1.**Venomous Bear (Turla Group)**
+## 1. **Venomous Bear (Turla Group)**
 Updated: 5/17/2017
 ### Aliases:
 ```
@@ -39,7 +39,7 @@ Embassies of Eastern Bloc Nations:
 
 [Snake Malware Framework For Mac OS X](https://otx.alienvault.com/pulse/5909fc8d28fba172cbbb89cf/)
 
-## 2.**Fancy Bear**
+## 2. **Fancy Bear**
 Updated: 5/18/2017
 ### Aliases:
 ```
@@ -66,7 +66,7 @@ Utilize Spear Phishing, Zero Days, and Malware
 
 **Affiliated with Cozy Bear**
 
-## 3.**OceanLotus Group (APT32)**
+## 3. **OceanLotus Group (APT32)**
 Updated: 5/19/2017
 ### Aliases:
 ```
