@@ -83,6 +83,7 @@ Countries:
 
 Fields of Interest:
 
+  Government
   Manufacturing
   Media
   Consumer Products
@@ -94,6 +95,16 @@ Fields of Interest:
 ### Other Relevant Info:
 
 **Malware Used - WINDSHIELD, KOMPROGO, SOUNDBITE, BEACON**
+
+**Malware Capabilities**
+
+  |  
+--|--
+  |  
+  |  
+  |  
+  |  
+  |  
 
 [APT32 a Threat to Global Corporations](https://www.fireeye.com/blog/threat-research/2017/05/cyber-espionage-apt32.html)
 
@@ -116,9 +127,9 @@ Bear = Russia
 
 Kitten = Iran
 
-India = Tiger
+Tiger = India
 
-North Korea = Chollima (a mythical winged horse)
+Chollima (a mythical winged horse) = North Korea
 
 
 **Non-Nation-State Adversaries**
