@@ -1,7 +1,9 @@
 # **Threat Actors**
 
-## **Venomous Bear (Turla Group)**
+*This document is continuously updated as I find more information*
 
+## **Venomous Bear (Turla Group)**
+Updated: 5/17/2017
 ### Aliases:
 ```
 - Snake
@@ -28,7 +30,7 @@ Embassies of Eastern Bloc Nations:
 - Poland
 - Germany
 ```
-### More Relevant Info:
+### Other Relevant Info:
 [Microsoft office Exploit](https://otx.alienvault.com/pulse/5911ff9cdbd6ea04445af363/)
 
 [Carbon: 2nd stage backdoor](https://otx.alienvault.com/pulse/58dd14f8e88c7c13038460ba/)
@@ -38,7 +40,7 @@ Embassies of Eastern Bloc Nations:
 [Snake Malware Framework For Mac OS X](https://otx.alienvault.com/pulse/5909fc8d28fba172cbbb89cf/)
 
 ## **Fancy Bear**
-
+Updated: 5/18/2017
 ### Aliases:
 ```
 APT28
@@ -54,16 +56,51 @@ Grizzly Steppe
 ### Targets:
 ```
 Military
-
+Political entities
 ```
 
-### More Relevant Info:
+### Other Relevant Info:
+[Ukraine Artillary Hack](https://www.crowdstrike.com/wp-content/brochures/FancyBearTracksUkrainianArtillery.pdf)
+
+Utilize Spear Phishing, Zero Days, and Malware
 
 **Affiliated with Cozy Bear**
 
+## **OceanLotus Group (APT32)**
+Updated: 5/19/2017
+### Aliases:
+```
+```
+### Targets:
+```
+Countries:
+
+Vietnam
+Germany
+Philippines
+China
+United States
+
+Fields of Interest:
+
+  Manufacturing
+  Media
+  Consumer Products
+  Banking
+  Hospitality
+  Network Security
+  Tech. Infrastructure
+
+
+```
+### Other Relevant Info:
+
+[APT32 a Threat to Global Corporations](https://www.fireeye.com/blog/threat-research/2017/05/cyber-espionage-apt32.html)
+
+
+
 # References
-
-
+*This section contains supporting information to the above list of APTs*
 **CrowdStrike Naming Convention**
 
 Made by Dmitri Alperovitch
