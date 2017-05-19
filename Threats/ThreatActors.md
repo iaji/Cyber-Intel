@@ -75,11 +75,11 @@ Updated: 5/19/2017
 ```
 Countries:
 
-Vietnam
-Germany
-Philippines
-China
-United States
+  Vietnam
+  Germany
+  Philippines
+  China
+  United States
 
 Fields of Interest:
 
@@ -101,6 +101,7 @@ Fields of Interest:
 
 # References
 *This section contains supporting information to the above list of APTs*
+
 **CrowdStrike Naming Convention**
 
 Made by Dmitri Alperovitch
