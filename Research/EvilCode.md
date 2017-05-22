@@ -19,10 +19,12 @@
 #### Sources:
 [Mozilla Info Page](https://support.mozilla.org/en-US/kb/i-found-fake-firefox-update)
 
-## **Gamarve/Andromeda**
+## **Gamarue/Andromeda**
 
 ### Notes:
 ```
 ```
 
 #### Sources:
+
+## Emo
