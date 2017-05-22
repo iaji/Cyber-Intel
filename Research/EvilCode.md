@@ -11,8 +11,9 @@
 - Firefox has an automated background update mechanism which will never prompt you to manually download and execute a file
 
 ```
-* Example of Fake Update Screen *
-*
+
+*Example of Fake Update Screen*
+
 ![Example of Fake Update](https://support.cdn.mozilla.net/media/uploads/gallery/images/2016-09-15-12-37-10-c81e72.png)
 
 #### Sources:
