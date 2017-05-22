@@ -98,13 +98,7 @@ Fields of Interest:
 
 **Malware Capabilities**
 
-  |  
---|--
-  |  
-  |  
-  |  
-  |  
-  |  
+
 
 [APT32 a Threat to Global Corporations](https://www.fireeye.com/blog/threat-research/2017/05/cyber-espionage-apt32.html)
 
