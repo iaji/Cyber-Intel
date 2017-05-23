@@ -45,3 +45,12 @@
 #### Sources:
 [Malware Breakdown](http://malwarenailed.blogspot.de/2017/01/gamarueandromeda-comeback.html)
 [Gamarue/Andromeda Comeback](https://otx.alienvault.com/pulse/5900b4dba0117e3404052fe7/)
+
+
+## **H-Worm (Houdini Worm)**
+
+*also known as Jenxcus*
+
+### Notes:
+
+#### Sources:
