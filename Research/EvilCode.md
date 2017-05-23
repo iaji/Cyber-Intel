@@ -33,11 +33,14 @@
 
 **Behavior**
 
-- uses a .lnk to drop and run malicious .dll files from a temp folder, which drops a malicious .exe.  Persistence is then created
-- .dlls in a CLSID format
-- Communicates out to some malicious domains
+* uses a .lnk to drop and run malicious .dll files from a temp folder, which drops a malicious .exe.  Persistence is then created
+* .dlls in a CLSID format
+* Communicates out to some malicious domains
 
+**Other**
 
+* 70-100mb size
+* Contains a lot of junk code, random strings, obfuscated code, RETN being used as calls, JMPs to code sections in memory
 
 #### Sources:
 [Malware Breakdown](http://malwarenailed.blogspot.de/2017/01/gamarueandromeda-comeback.html)
