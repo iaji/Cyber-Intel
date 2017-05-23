@@ -98,7 +98,56 @@ Fields of Interest:
 
 **Malware Capabilities**
 
+**WINDSHIELD**
 
+- Command and control (C2) communications via TCP raw sockets
+- Four configured C2s and six configured ports randomly-chosen C2/port for communications
+- Registry manipulation
+- Get the current module's file name
+- Gather system information including registry values, user name, computer name, and current code page
+- File system interaction including directory creation, file deletion, reading, and writing files
+- Load additional modules and execute code
+- Terminate processes
+- Anti-disassembly
+
+**KOMPROGO**
+
+- Fully-featured backdoor capable of process, file, and registry management
+- Creating a reverse shell
+- File transfers
+- Running WMI queries
+- Retrieving information about the infected system
+
+**SOUNDBITE**
+
+- C2 communications via DNS
+- Process creation
+- File upload
+- Shell command execution
+- File and directory enumeration/manipulation
+- Window enumeration
+- Registry manipulation
+- System information gathering
+
+**PHOREAL**
+
+- C2 communications via ICMP
+- Reverse shell creation
+- Filesystem manipulation
+- Registry manipulation
+- Process creation
+- File upload
+
+**BEACON (Cobalt Strike)**
+
+- Publicly available payload that can inject and execute arbitrary code into processes
+- Impersonating the security context of users
+- Importing Kerberos tickets
+- Uploading and downloading files
+- Executing shell commands
+- Configured with malleable C2 profiles to blend in with normal network traffic
+- Co-deployment and interoperability with Metasploit framework
+- SMB Named Pipe in-memory backdoor payload that enables peer-to-peer C2 and pivoting over SMB
 
 [APT32 a Threat to Global Corporations](https://www.fireeye.com/blog/threat-research/2017/05/cyber-espionage-apt32.html)
 
