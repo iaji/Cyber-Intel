@@ -7,10 +7,8 @@
 
 *firefox-patch.js*
 ### Notes:
-```
-- Firefox has an automated background update mechanism which will never prompt you to manually download and execute a file
 
-```
+- Firefox has an automated background update mechanism which will never prompt you to manually download and execute a file
 
 *Example of Fake Update Screen*
 
@@ -22,9 +20,25 @@
 ## **Gamarue/Andromeda**
 
 ### Notes:
-```
-```
+
+**Symptoms**
+* Registry:
+  In subkey: HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows\
+  Value: "load"
+  Data: "<malware file name>"
+
+* Infections from USB and phishing emails
+
+**Type** : *Worm*
+
+**Behavior**
+
+- uses a .lnk to drop and run malicious .dll files from a temp folder, which drops a malicious .exe.  Persistence is then created
+- .dlls in a CLSID format
+- Communicates out to some malicious domains
+
+
 
 #### Sources:
-
-## Emo
+[Malware Breakdown](http://malwarenailed.blogspot.de/2017/01/gamarueandromeda-comeback.html)
+[Gamarue/Andromeda Comeback](https://otx.alienvault.com/pulse/5900b4dba0117e3404052fe7/)
