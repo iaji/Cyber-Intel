@@ -29,3 +29,15 @@
 [Threat Connect Blog](https://www.threatconnect.com/blog/)
 
 [Secure Works Blog](https://www.secureworks.com/blog)
+
+[Deriving Cyber Threat Intelligence](http://malwarenailed.blogspot.de/)
+
+[KernelMode Malware Forum](http://www.kernelmode.info/forum/viewforum.php?f=16)
+
+[AVCaesar](https://avcaesar.malware.lu/)
+
+[Contagio](http://contagiodump.blogspot.com/)
+
+[Fox IT](https://blog.fox-it.com/)
+
+[Forcepoint](https://blogs.forcepoint.com/security-labs)
