@@ -53,4 +53,25 @@
 
 ### Notes:
 
+**Payload**
+* VBS script based RAT
+* Wrapped in PE executable dropper
+* obfuscated with base 64 encryption
+
+**Command and Control Behavior**
+* installs and sends beacon
+* Beacon contains host information
+* Command format:  {command}<|>{param1}<|>{param2}
+
+**Inner Workings**
+* Control panel written in Delphi
+* Control panel used to interact with infected machines
+* Similar to NjWorm, njRAT, XtremeRAT & PoisonIvy
+
+**Other Notes**
+* njq8 might have helped develope H-Worm
 #### Sources:
+[Fireye H-Worm Report](https://www.fireeye.com/blog/threat-research/2013/09/now-you-see-me-h-worm-by-houdini.html)
+
+[In Depth Breakdown](http://malwarenailed.blogspot.de/search?updated-max=2017-05-13T02:56:00%2B04:00&max-results=7)
+[Autoit Sample](https://pastebin.com/vMQWsvHS)
