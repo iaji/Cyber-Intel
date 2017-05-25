@@ -79,3 +79,49 @@ User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProd
 [In Depth Breakdown](http://malwarenailed.blogspot.de/search?updated-max=2017-05-13T02:56:00%2B04:00&max-results=7)
 
 [Autoit Sample](http://tinyurl.com/lw3dcjr)
+
+
+
+# Other Research
+
+## Commonly Used Malicious File Extensions
+
+**MOST COMMON**
+* .exe - program file
+* .com - MS-DOS program
+* .pif - shorcut to MS-DOS program
+* .bat - batch file
+* .scr - screen saver file
+
+*Sometimes viruses attempt to use two file extensions to spoof looking legit.  EX. badfile.jpg.exe*
+
+**ALL EXTENSIONS**
+* .jpg, .png, .MP3, .gif and other media files do not contain code and are less suspect.
+* .GADGET - file introduced in vista for desktop gadgets
+* .MSI - Microsoft Installer File used to install apps, just like .exe's
+* .MSP - Windows installer for patches on apps installed by .MSI
+* .COM - Used by MS-DOS
+* .SCR - Windows screen saver file that may contain executable code
+* .HTA - HTML app
+* .CPL - Control panel file
+* .MSC - Microsoft management console file ex. Disk management tool
+* .JAR - java executable
+* .BAT - batch file that executes list of commands when run
+* .CMD - similar to batch file introduced in windows NT
+* .VB .VBS - VBScript file
+* .VBE - encrypted VBScript
+* .JS - Javascript file
+* .JSE - encrypted .js
+* .WS .WSF - Windows script file
+* .PS1, .PS1XML, .PS2, .PS2XML, .PSC1, .PSC2 - A windows PowerShell script used to run PowerShell commands
+* .MSH, .MSH1, .MSH2, .MSHXML, .MSH2XML - Monad script file (Old PowerShell)
+* .SCF - Windows explorer command file, can be used to insert malicious commands to explorer
+* .LNK - A link to a program on the PC, maybe used to delete files without permission
+* .INF - Text file used by AutoRun.  Can launch evil apps
+* .DOC, .XLS, .PPT - commonly used to target businesses if malicious
+* .DOCM, .DOTM, .XLSM, .XLTM, .XLAM, .PPTM, .POTM, .PPAM, .PPSM, .SLDM - M stands for macros.  Introduced in Office 2007
+* .CHM - HTML file compiled by Microsoft
+* .DRV - Windows device driver
+* .VXD - Windows virtual device driver
+* .DLL - Dynamic link library file
+* .SWF - Shockwave flash
