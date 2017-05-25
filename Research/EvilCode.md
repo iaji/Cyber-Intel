@@ -125,3 +125,5 @@ User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProd
 * .VXD - Windows virtual device driver
 * .DLL - Dynamic link library file
 * .SWF - Shockwave flash
+
+**SOURCE** [Extensions](https://cfoc.org/windows-file-extension-list-types-of-files-exploited-by-malware/)
