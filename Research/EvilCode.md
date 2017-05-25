@@ -72,7 +72,7 @@ User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProd
 * Similar to NjWorm, njRAT, XtremeRAT & PoisonIvy
 
 **Other Notes**
-* njq8 might have helped develope H-Worm
+* njq8 might have helped develop H-Worm
 #### Sources:
 [Fireye H-Worm Report](https://www.fireeye.com/blog/threat-research/2013/09/now-you-see-me-h-worm-by-houdini.html)
 
