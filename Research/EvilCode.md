@@ -75,5 +75,7 @@ User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProd
 * njq8 might have helped develop H-Worm
 #### Sources:
 [Fireye H-Worm Report](https://www.fireeye.com/blog/threat-research/2013/09/now-you-see-me-h-worm-by-houdini.html)
+
 [In Depth Breakdown](http://malwarenailed.blogspot.de/search?updated-max=2017-05-13T02:56:00%2B04:00&max-results=7)
+
 [Autoit Sample](http://tinyurl.com/lw3dcjr)
