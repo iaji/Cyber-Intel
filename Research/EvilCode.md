@@ -59,8 +59,11 @@
 * obfuscated with base 64 encryption
 
 **Command and Control Behavior**
-* installs and sends beacon
-* Beacon contains host information
+* installs and starts communication with C2
+* Content sent :
+```
+User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProductInstalled or nan-av}<|>{USBSpread: true or false} - {CurrentSystemDate}
+```
 * Command format:  {command}<|>{param1}<|>{param2}
 
 **Inner Workings**
