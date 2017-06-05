@@ -83,6 +83,8 @@ User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProd
 
 ## **Dumping Windows Credentials**
 
+### Notes:
+
 Core principles behind credential dumping:
 * Safety
 * Stealth
@@ -92,6 +94,13 @@ System Level Privilege needed.  Credential gathering is the next move so a hacke
 
 * If the host is part of an Active Directory domain hacker will be looking for **privileged domain accounts**. Preferably a member of the **Domain Admins** group.
 
+**Credential Dumping Techniques**:
+
+* **Registry Hives**
+
+- Get a copy of SYSTEM, SECURITY, and SAM Hives
+- Ex. C:\temp\sam.save or security.save or system.save
+- 
 
 
 
