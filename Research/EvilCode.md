@@ -94,7 +94,7 @@ System Level Privilege needed.  Credential gathering is the next move so a hacke
 
 * If the host is part of an Active Directory domain hacker will be looking for **privileged domain accounts**. Preferably a member of the **Domain Admins** group.
 
-**Credential Dumping Techniques**:
+####**Credential Dumping Techniques**:
 
 **Registry Hives**
 
