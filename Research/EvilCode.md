@@ -90,7 +90,7 @@ Core principles behind credential dumping:
 * Stealth
 * Efficiency
 
-System Level Privilege needed.  Credential gathering is the next move so a hacker can move through the network with greater access.
+**System Level** Privilege needed.  Credential gathering is the next move so a hacker can move through the network with greater access.
 
 * If the host is part of an Active Directory domain hacker will be looking for **privileged domain accounts**. Preferably a member of the **Domain Admins** group.
 
@@ -105,29 +105,35 @@ System Level Privilege needed.  Credential gathering is the next move so a hacke
 
 - Get password hashes, cached domain creds, and LSA secrets.
 - Tool used is **secretsdump**
-- Ex. $ secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+
+```
+Ex. $ secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+```
 
 **Local SAM Hashes**
 
-- Crack LM hashes with Ophcrack
-- Crack NT hashes with hashcat or JtR
-- Pass the Hash against accounts with same pass hash
+- Crack **LM** hashes with Ophcrack
+- Crack **NT** hashes with hashcat or JtR
+- Pass the Hash against accounts with same password hash
 
 **Cached Domain Credentials**
 
 - Passwords of domain users that have been logged on to the host previously.
-- Also crack these using JtR or hashcat.  Format is mscash (xp, w2k3) or mscash2 (vista, w7, w2k8)
-- You cant preform pass the hash attack with this type of hash
+- Also crack these using **JtR or hashcat**.  Format is mscash (xp, w2k3) or mscash2 (vista, w7, w2k8)
+- You **cant** preform pass the hash attack with this type of hash
 
 **LSA Secrets**
 
-- Passwords for services that are set to run under actual Windows user accounts (as opposed to Local System, Network Service, and Local service accounts)
-- If host is part of a domain you will find domain credentials of machine account
+- Passwords for services that are set to run under **actual Windows user accounts** (as opposed to Local System, Network Service, and Local service accounts)
+- If host is part of a domain you will find **domain credentials of machine account**
 - Authenticate to domain in order to list all domain users and Admins
 - Use **pth** on Kali or **wce** on windows to use these credentials
-- Ex. $ pth-net rpc user -U 'securus\john-pc$%aad3b435b51404eeaad3b435b51404ee:2fb3672702973ac1b9ade0acbdab432f' -S dc1.securus.corp.com
+```
+Ex. $ pth-net rpc user -U 'securus\john-pc$%aad3b435b51404eeaad3b435b51404ee:2fb3672702973ac1b9ade0acbdab432f' -S dc1.securus.corp.com
+
+```
 - Browse shares for Passwords
-- Look on domain controller for Passwords in Group Policy Preferences
+- Look on **domain controller** for Passwords in Group Policy Preferences
 
 **In-Memory Credentials**
 
