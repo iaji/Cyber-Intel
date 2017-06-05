@@ -109,12 +109,27 @@ System Level Privilege needed.  Credential gathering is the next move so a hacke
 -
 **Local SAM Hashes**
 
--Crack LM hashes with Ophcrack
--Crack NT hashes with hashcat or JtR
--Pass the Hash against accounts with same pass hash
+- Crack LM hashes with Ophcrack
+- Crack NT hashes with hashcat or JtR
+- Pass the Hash against accounts with same pass hash
 
-*
+**Cached Domain Credentials**
 
+- Passwords of domain users that have been logged on to the host previously.
+- Also crack these using JtR or hashcat.  Format is mscash (xp, w2k3) or mscash2 (vista, w7, w2k8)
+- You cant preform pass the hash attack with this type of hash
+
+**LSA Secrets**
+
+- Passwords for services that are set to run under actual Windows user accounts (as opposed to Local System, Network Service, and Local service accounts)
+- If host is part of a domain you will find domain credentials of machine account
+- Authenticate to domain in order to list all domain users and Admins
+- Use **pth** on Kali or **wce** on windows to use these credentials
+- Ex. $ pth-net rpc user -U 'securus\john-pc$%aad3b435b51404eeaad3b435b51404ee:2fb3672702973ac1b9ade0acbdab432f' -S dc1.securus.corp.com
+- Browse shares for Passwords
+- Look on domain controller for Passwords in Group Policy Preferences
+
+**In-Memory Credentials**
 
 
 
