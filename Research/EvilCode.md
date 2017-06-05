@@ -96,11 +96,25 @@ System Level Privilege needed.  Credential gathering is the next move so a hacke
 
 **Credential Dumping Techniques**:
 
-* **Registry Hives**
+**Registry Hives**
 
 - Get a copy of SYSTEM, SECURITY, and SAM Hives
 - Ex. C:\temp\sam.save or security.save or system.save
-- 
+
+**Password Hashes**
+
+-Get password hashes, cached domain creds, and LSA secrets.
+- Tool used is **secretsdump**
+- Ex. $ secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+-
+**Local SAM Hashes**
+
+-Crack LM hashes with Ophcrack
+-Crack NT hashes with hashcat or JtR
+-Pass the Hash against accounts with same pass hash
+
+*
+
 
 
 
