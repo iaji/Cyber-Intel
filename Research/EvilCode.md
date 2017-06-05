@@ -103,10 +103,10 @@ System Level Privilege needed.  Credential gathering is the next move so a hacke
 
 **Password Hashes**
 
--Get password hashes, cached domain creds, and LSA secrets.
+- Get password hashes, cached domain creds, and LSA secrets.
 - Tool used is **secretsdump**
 - Ex. $ secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
--
+
 **Local SAM Hashes**
 
 - Crack LM hashes with Ophcrack
