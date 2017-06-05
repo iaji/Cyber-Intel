@@ -81,6 +81,21 @@ User-Agent: {DiskVolumeSerial}<|>{Hostname}<|>{Username}<|>{OS}<|>plus<|>{AVProd
 [Autoit Sample](http://tinyurl.com/lw3dcjr)
 
 
+## **Dumping Windows Credentials**
+
+Core principles behind credential dumping:
+* Safety
+* Stealth
+* Efficiency
+
+System Level Privilege needed.  Credential gathering is the next move so a hacker can move through the network with greater access.
+
+* If the host is part of an Active Directory domain hacker will be looking for **privileged domain accounts**. Preferably a member of the **Domain Admins** group.
+
+
+
+
+
 
 # Other Research
 
