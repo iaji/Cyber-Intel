@@ -165,7 +165,16 @@ mimikatz.exe log "sekurlsa::minidump lsass.dmp" sekurlsa::logonPasswords exit
 
 ### **Protected Storage**
 
+- Dump passwords from IE, Outlook, etc. using:
+[Protected Storage PassView](http://www.nirsoft.net/utils/pspv.html)
+### Third Party Software
+[Nirsoft](http://nirsoft.net/utils/index.html#password_utils)
+- Tools to recover passwords from third party applications.
 
+# MORE COMING SOON!
+
+#### Sources
+[Securusglobal](https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/)
 # Other Research
 
 ## Commonly Used Malicious File Extensions
