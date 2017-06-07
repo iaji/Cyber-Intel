@@ -137,9 +137,26 @@ Ex. $ pth-net rpc user -U 'securus\john-pc$%aad3b435b51404eeaad3b435b51404ee:2fb
 
 **In-Memory Credentials**
 
+- Dump **clear-text** passwords from memory using **mimikatz**
+- **Windows Task Manager** to dump LSASS properties
+  - Right click lsass.exe and select create dump file
+- If **wce** is pushed to a host the hacker is probably trying to dump passwords
 
+[PowerShell-Fu Method](https://github.com/mattifestation/PowerSploit/blob/master/Exfiltration/Out-Minidump.ps1)
 
+- Dump collected credentials offline via **mimikatz** minidump module
 
+```
+mimikatz.exe log "sekurlsa::minidump lsass.dmp" sekurlsa::logonPasswords exit
+```
+
+**Mimikatz must be run on the same architecture you pulled the dump from!!!**
+
+![](http://blog.gentilkiwi.com/wp-content/uploads/2013/04/minidump_matrix.png)
+
+**Credential Manager**
+
+- When you click "Remember my password" the password get stored in **Windows Data Protection API**
 
 # Other Research
 
