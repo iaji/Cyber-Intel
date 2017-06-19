@@ -1,6 +1,5 @@
 import re
 
-
 def IndicatorType(indicator):
     ip_regex = r'(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
     md5_regex = r'(?=(\b[A-Fa-f0-9]{32}\b))'
@@ -90,24 +89,30 @@ def ipParse(indicators):
     return IPs
 
 def urlParse(indicators):
+    '''This function will take in a list of complete urls and remove the domain from them automatically'''
     URL_regex = r'((?:http(?:s)?:\/\/)?)((?:www\.)?[a-zA-Z0-9@:%._\+~#=\-]{2,256}\.[a-z0-9]{2,6}\b)((?:\:\d+)?)((?:[-\w@:%\+.~#&/=]*)?)((?:\?[-\w%\+.~#&=]*)?)'
     URLs = re.findall(URL_regex, indicators, re.IGNORECASE | re.MULTILINE)
-    print URLs
-
+    type(len(URLs))
+    urlCnt = 0
+    domains = []
+    ##[(protocol, domain, port, extension, paramteres)]
     if len(URLs) == 0:
         return ['No URLs']
 
     elif len(URLs) == 1:
-        URLs[0] = ('URL', URLs[0], 'SOURCE')
+        URLs[0] = ('URL', URLs[0][1], 'SOURCE')
         return URLs
     else:
-        for URL in len(URLs):
-            URL = ('URL', URL,'SOURCE')
-    return URLs
+        for urlCnt in xrange(len(URLs)):
+            domains.append(('URL' ,URLs[urlCnt][1], 'Source'))
+        return domains
 
 def main():
-    indicators = ('hello\n7d7aaa8c9a36324a2c5e9b0a3440344502f28b90776baa6b8dac7ac88a83aef0\n13cdbd8c31155610b628423dc2720419\n2cb8230281b86fa944d3043ae906016c8b5984d9\nwww.google.com/help\nuc.edu')
+    indicators = ('buildthenewcity.biz http://buildthenewcity.biz/COUNTER http://buildthenewcity.biz/COUNTER?0000001H2T9LqCWPTLuKUFMuPXga8heWrAgEVBeaTXUZbhasf6ZvZ6kD7C8cHTs5BwhreUsHh-2XLJP2eqoZHgaCXV2TyAjtY-Bl7PwtaWbIBe2UcsiOWyFXbENAOYYf0B80')
 
-    ans = md5Parse(indicators) + sha1Parse(indicators) + sha256Parse(indicators) + ipParse(indicators)
-    print ans
-main()
+#('hello\n7d7aaa8c9a36324a2c5e9b0a3440344502f28b90776baa6b8dac7ac88a83aef0\n13cdbd8c31155610b628423dc2720419\n2cb8230281b86fa944d3043ae906016c8b5984d9\nhttp://www.google.com/help\nuc.edu')
+
+#    ans = md5Parse(indicators) + sha1Parse(indicators) + sha256Parse(indicators) + ipParse(indicators) + urlParse(indicators)
+#    return ans
+#ans = main()
+#print ans
