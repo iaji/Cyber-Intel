@@ -24,13 +24,14 @@ def Indicator_Type(indicator):
 
 
 def md5_parse(indicators, Source):
-    '''Takes in a text dump and extracts MD5's then stores them in an Array of tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
+    '''Takes in a text dump and extracts MD5's then stores them in an Array of
+       tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
 
     md5_regex = r'(?=(\b[A-Fa-f0-9]{32}\b))'
     md5s = re.findall(md5_regex, indicators, re.IGNORECASE | re.MULTILINE)
     md5cnt = 0
     md5Hashes = []
-    if len(md5s) == 0:
+    if len(md5s) == (0 or None):
         return md5Hashes.append(('No MD5s', 'NULL', 'NULL'))
 
     elif len(md5s) == 1:
@@ -44,7 +45,8 @@ def md5_parse(indicators, Source):
 
 
 def sha1_parse(indicators, Source):
-    '''Takes in a text dump and extracts SHA1's then stores them in an Array of tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
+    '''Takes in a text dump and extracts SHA1's then stores them in an Array of
+       tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
 
     SHA1_regex = r'\b([a-f0-9]{40})\b'
     SHA1s = re.findall(SHA1_regex, indicators, re.IGNORECASE | re.MULTILINE)
@@ -63,7 +65,8 @@ def sha1_parse(indicators, Source):
 
 
 def sha256_parse(indicators, Source):
-    '''Takes in a text dump and extracts SHA256's then stores them in an Array of tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
+    '''Takes in a text dump and extracts SHA256's then stores them in an Array
+       of tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
 
     SHA256_regex = r'\b[A-Fa-f0-9]{64}\b'
     SHA256s = re.findall(SHA256_regex, indicators, re.IGNORECASE | re.MULTILINE)
@@ -82,13 +85,14 @@ def sha256_parse(indicators, Source):
 
 
 def ip_parse(indicators, Source):
-    '''Takes in a text dump and extracts IP's then stores them in an Array of tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
+    '''Takes in a text dump and extracts IP's then stores them in an Array of
+       tuples.  Formatted (TYPE, CONTENT, SOURCE)'''
 
     ip_regex = r'(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
     IPs = re.findall(ip_regex, indicators, re.IGNORECASE | re.MULTILINE)
     IPCnt = 0
     IPTotal = []
-    if len(IPs) == 0:
+    if len(IPs) == (0 or None):
         return IPTotal.append(('No IPs', 'NULL', 'NULL'))
 
     elif len(IPs) == 1:
@@ -103,7 +107,8 @@ def ip_parse(indicators, Source):
 
 
 def url_parse(indicators, Source):
-    '''This function will take in a list of complete urls and remove the domain from them automatically'''
+    '''This function will take in a list of complete urls and remove the domain
+       from them automatically'''
 
     URL_regex = r'((?:http(?:s)?:\/\/)?)((?:www\.)?[a-zA-Z0-9@:%._\+~#=\-]{2,256}\.(?!doc)[a-z]{2,6}\b)((?:\:\d+)?)((?:[-\w@:%\+.~#&/=]*)?)((?:\?[-\w%\+.~#&=]*)?)'
     URLs = re.findall(URL_regex, indicators, re.IGNORECASE | re.MULTILINE)
@@ -132,7 +137,7 @@ def collect_all_indicators(data, Source):
     return [md5s, sha1s, sha256s, ips, domains]
 
 
-def csvFormatter(StoreInd):
+def csv_formatter(StoreInd):
     sourcePage = indicatorSelector = allIndicators = singleIndicator = indicatorInfo = 0
     mantisFile = csv.writer(open('mantisIndicators.csv', 'w'))
     mantisFile.writerow(['Type', 'Indicator', 'Source'])
@@ -148,40 +153,52 @@ def csvFormatter(StoreInd):
                     mantisFile.writerow(tableIndicator)
 
 
+'''def clean_csv():
+    with open('mantisIndicators.csv', 'r') as in_file, open('mantisIndicators.csv', 'w') as out_file:
+        seen = set() # set for fast O(1) amortized lookup
+        for line in in_file:
+            if line in seen: continue # skip duplicate
+
+            seen.add(line)
+            out_file.write(line)'''
+
+
+def dynamoo_scrape(data, source):
+    '''anything -> Yellow Highlight -> blocklist -> anything -> : -> newline ->
+    all indicators -> <div style="clear: both;"></div>'''
+    mooRegex = r'blocklist.*(?:<br/>\n)+(?:<b>.*<\/b>.*\n)*'
+    mooIndicators = re.findall(mooRegex, data, re.IGNORECASE | re.MULTILINE)
+    mooMooMilk = collect_all_indicators(str(mooIndicators), source.strip('\n'))
+    print mooMooMilk
+    return mooMooMilk
+
 def source_scrape():
     intelSources = 'Intel.txt'
     # raw_input("Please enter the text file to pull from: ")
     with open(intelSources) as Sources:
-        # num_lines = sum(1 for line in Sources)
+        lines = Sources.readlines()
         StoreInd = []
-        for Source in Sources:
+        for Source in lines:
             if 'fireeye' in Source:
                 page = urllib2.urlopen(Source).read()
                 soup = BeautifulSoup(page)
                 data = str(soup.find_all('table'))
                 StoreInd.append(collect_all_indicators(data, Source.strip('\n')))
+                continue
             if 'dynamoo' in Source:
-                page = urllib2.urlopen(Source).read
-                soup = BeautifulSoup(page)
-            else:
-                print str(Source) + "Not supported"
-    return StoreInd
+                page = urllib2.urlopen(Source).read()
+                mooSoup = str(BeautifulSoup(page))
+                mooMilk = dynamoo_scrape(mooSoup, Source)
+                StoreInd.append(mooMilk)
+            #else:
+            #    print str(Source) + "Not supported"
+
+            return StoreInd
 
 
-'''ans[source][indicator]'''
 
 
-# def CsvImport(Indicators):
+
 ans = source_scrape()
-csvFormatter(ans)
-
-# print len(ans[0][1]) #sha1s
-# print len(ans[0][2]) #sha256s
-# print ans[0][3] #ips
-# print ans[0][4] #domains
-
-
-#    ans = md5_parse(indicators) + sha1_parse(indicators) + sha256_parse(indicators) + ip_parse(indicators) + url_parse(indicators)
-#    return ans
-# ans = main()
-# print ans
+print csv_formatter(ans)
+#csv_formatter(ans)
