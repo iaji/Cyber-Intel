@@ -35,12 +35,12 @@ def md5_parse(indicators, Source):
         return md5Hashes.append(('No MD5s', 'NULL', 'NULL'))
 
     elif len(md5s) == 1:
-        md5s[0] = ('MD5', md5s[0], Source)
+        md5s[0] = ('HASH', md5s[0], Source)
         return md5s
 
     else:
         for md5Cnt in xrange(len(md5s)):
-            md5Hashes.append(('MD5', md5s[md5Cnt], Source))
+            md5Hashes.append(('HASH', md5s[md5Cnt], Source))
         return md5Hashes
 
 
@@ -56,11 +56,11 @@ def sha1_parse(indicators, Source):
         return SHA1Hashes.append(('No SHA1s', 'NULL', 'NULL'))
 
     elif len(SHA1s) == 1:
-        SHA1s[0] = ('SHA1', SHA1s[0], Source)
+        SHA1s[0] = ('HASH', SHA1s[0], Source)
         return SHA1s
     else:
         for SHA1Cnt in xrange(len(SHA1s)):
-            SHA1Hashes.append(('SHA1', SHA1s[SHA1Cnt], Source))
+            SHA1Hashes.append(('HASH', SHA1s[SHA1Cnt], Source))
         return SHA1Hashes
 
 
@@ -76,11 +76,11 @@ def sha256_parse(indicators, Source):
         return SHA256Hashes.append(('No SHA256s', 'NULL', 'NULL'))
 
     elif len(SHA256s) == 1:
-        SHA256s[0] = ('SHA256', SHA256s[0], Source)
+        SHA256s[0] = ('HASH', SHA256s[0], Source)
         return SHA256s
     else:
         for SHA256Cnt in xrange(len(SHA256s)):
-            SHA256Hashes.append(('SHA256', SHA256s[SHA256Cnt]), Source)
+            SHA256Hashes.append(('HASH', SHA256s[SHA256Cnt]), Source)
         return SHA256Hashes
 
 
@@ -96,13 +96,13 @@ def ip_parse(indicators, Source):
         return IPTotal.append(('No IPs', 'NULL', 'NULL'))
 
     elif len(IPs) == 1:
-        IPs[0] = ('IPv4', IPs[0], Source)
+        IPs[0] = ('IP', IPs[0], Source)
         return IPs
     else:
         for IPCnt in xrange(len(IPs)):
             IPsplit = IPs[IPCnt]
             IPsplit = '.'.join(map(str, IPsplit))
-            IPTotal.append(('IPv4', IPsplit, Source))
+            IPTotal.append(('IP', IPsplit, Source))
         return IPTotal
 
 
@@ -120,11 +120,11 @@ def url_parse(indicators, Source):
         return domains.append(('No  URLs', 'NULL', 'NULL'))
 
     elif len(URLs) == 1:
-        URLs[0] = ('URL', URLs[0][1], Source)
+        URLs[0] = ('FQDN', URLs[0][1], Source)
         return URLs
     else:
         for urlCnt in xrange(len(URLs)):
-            domains.append(('URL', URLs[urlCnt][1], Source))
+            domains.append(('FQDN', URLs[urlCnt][1], Source))
         return domains
 
 
@@ -147,20 +147,8 @@ def csv_formatter(StoreInd):
             #  Grabs ALL indicators from source
             for allIndicators in xrange(len(StoreInd[sourcePage][indicatorSelector])):
                 # Grabs ALL of each type of indicator
-                for singleIndicator in xrange(len(StoreInd[sourcePage][indicatorSelector][allIndicators])):
-                    # Grabs EACH indicator seperatly
-                    tableIndicator = StoreInd[sourcePage][indicatorSelector][allIndicators]
-                    mantisFile.writerow(tableIndicator)
-
-
-'''def clean_csv():
-    with open('mantisIndicators.csv', 'r') as in_file, open('mantisIndicators.csv', 'w') as out_file:
-        seen = set() # set for fast O(1) amortized lookup
-        for line in in_file:
-            if line in seen: continue # skip duplicate
-
-            seen.add(line)
-            out_file.write(line)'''
+                tableIndicator = StoreInd[sourcePage][indicatorSelector][allIndicators]
+                mantisFile.writerow(tableIndicator)
 
 
 def dynamoo_scrape(data, source):
@@ -169,8 +157,9 @@ def dynamoo_scrape(data, source):
     mooRegex = r'blocklist.*(?:<br/>\n)+(?:<b>.*<\/b>.*\n)*'
     mooIndicators = re.findall(mooRegex, data, re.IGNORECASE | re.MULTILINE)
     mooMooMilk = collect_all_indicators(str(mooIndicators), source.strip('\n'))
-    print mooMooMilk
+    print(mooMooMilk)
     return mooMooMilk
+
 
 def source_scrape():
     intelSources = 'Intel.txt'
@@ -190,15 +179,11 @@ def source_scrape():
                 mooSoup = str(BeautifulSoup(page))
                 mooMilk = dynamoo_scrape(mooSoup, Source)
                 StoreInd.append(mooMilk)
-            #else:
-            #    print str(Source) + "Not supported"
+            else:
+                print(str(Source) + "Not supported")
 
             return StoreInd
 
 
-
-
-
 ans = source_scrape()
-print csv_formatter(ans)
-#csv_formatter(ans)
+csv_formatter(ans)
